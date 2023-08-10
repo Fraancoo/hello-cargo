@@ -63,21 +63,32 @@ fn chars() {
 }
 
 fn parsing() {
-    println!("- - - - - Parsing - - - - -");
+    println!("- - - - - parsing - - - - -");
     let num: i8 = "127".parse().expect("Not a valid number");
     println!("{num}")
 }
 
 fn tuples() {
-    println!("- - - - - Tuples - - - - -");
+    println!("- - - - - tuples - - - - -");
+    // Una tupla es un conjunto de valores que pueden
+    // ser de distintos tipos.
+    // La longitud de una tupla no puede cambiar.
     let mut tuple: (&str, u32, f64, bool) = ("Tuple", 664, 3.14, true);
     println!("{}", tuple.0);
     tuple.0 = "Hola";
     println!("{} {} {} {}", tuple.0, tuple.1, tuple.2, tuple.3);
 }
 
+fn arrays() {
+    println!("- - - - - arrays - - - - -");
+    // Un arreglo es un conjunto de valores del mismo tipo.
+    // La longitud de un arreglo no puede cambiar.
+    let array: [i8; 3] = [1, 2, 3];
+    println!("{} {} {}", array[0], array[2], array[1]);
+}
+
 fn tuple_structur() {
-    println!("- - - - - Tuple Structur - - - - -");
+    println!("- - - - - tuple_structur - - - - -");
     struct Profesor(u8, String, String, bool);
 
     let prof: Profesor = Profesor(1, String::from("Mario"), String::from("Castañeda"), true);
@@ -89,7 +100,7 @@ fn tuple_structur() {
 }
 
 fn classic_structur() {
-    println!("- - - - - Classic Structures - - - - -");
+    println!("- - - - - classic_structur - - - - -");
     struct User {
         id: u8,
         fname: String,
@@ -108,9 +119,4 @@ fn classic_structur() {
     println!("First name: {}", user.fname);
     println!("Last name: {}", user.lname);
     println!("Status: {}", user.status);
-}
-
-fn arrays() {
-    let array: [i8; 3] = [1, 2, 3];
-    println!("{} {} {}", array[0], array[1], array[2]);
 }
